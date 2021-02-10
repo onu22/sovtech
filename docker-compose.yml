@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  open.api:
+    image: ${REGISTRY:-sovtech-pascal-}open.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Open.API/Dockerfile

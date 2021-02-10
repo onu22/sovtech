@@ -1,0 +1,34 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open.API", "Open.API\Open.API.csproj", "{322B27C6-7D7E-4006-B90E-9283B52B558F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{66F96BD0-04DF-4DEE-B065-97BEEA156D61}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{667038D0-5576-4794-8DCE-553892DFC37E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open.API.Units", "Open.ApI.UnitTests\Open.API.Units.csproj", "{31E65204-830F-42C1-8864-918A451E8907}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{322B27C6-7D7E-4006-B90E-9283B52B558F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322B27C6-7D7E-4006-B90E-9283B52B558F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322B27C6-7D7E-4006-B90E-9283B52B558F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322B27C6-7D7E-4006-B90E-9283B52B558F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667038D0-5576-4794-8DCE-553892DFC37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667038D0-5576-4794-8DCE-553892DFC37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667038D0-5576-4794-8DCE-553892DFC37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667038D0-5576-4794-8DCE-553892DFC37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E65204-830F-42C1-8864-918A451E8907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E65204-830F-42C1-8864-918A451E8907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E65204-830F-42C1-8864-918A451E8907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E65204-830F-42C1-8864-918A451E8907}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31E65204-830F-42C1-8864-918A451E8907} = {66F96BD0-04DF-4DEE-B065-97BEEA156D61}
+	EndGlobalSection
+EndGlobal
