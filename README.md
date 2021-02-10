@@ -22,7 +22,7 @@ STEPS:
 
 (2. Run solution. docker-compose project is set as default and should be used in order to avoid changing port.
 
-(3. Visit to login: **https://localhost:9100/Account/login** You will be redirected to microsoft to log in. NB: you may have to Change port
+(3. Visit to login: **https://localhost:9100/Account/login** You will be redirected to microsoft to log in. NB: you may need to change port if default project is not docker-compose
 
 (4. Enter username: **sovtechuser@pascal2bhotmail.onmicrosoft.com** and password: Mama6000
 
