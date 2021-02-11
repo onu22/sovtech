@@ -11,7 +11,7 @@ namespace Open.API.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-             "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "Pascal testing"
+             "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "Alex testing"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
