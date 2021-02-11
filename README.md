@@ -2,13 +2,13 @@
 
 STEPS:
 
-(1. Visit to login: **https://sovtechapp.azurewebsites.net/Account/login** You will be redirected to microsoft to log in
+(1. Visit to login: **https://sovtechchpas.azurewebsites.net/Account/login** You will be redirected to microsoft to log in
 
 (2. Enter username: **sovtechuser@pascal2bhotmail.onmicrosoft.com** and password: Mama6000
 
 (3. Copy the value of **accessToken** generated from the login action.
 
-(4. Visit: https://sovtechapp.azurewebsites.net/swagger/index.html 
+(4. Visit: https://sovtechchpas.azurewebsites.net/swagger/index.html 
 
 (5. Login with the **accessToken** from step 3 by clicking on "Authorize" button. Enter: Bearer *<replace_with_accesstoken>*
 
