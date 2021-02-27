@@ -1,28 +1,35 @@
-name: .NET build and deploy app
+name: .NET build and deploy container
 
 on:
   push:
     branches: [ main ]
-env:
- AZURE_WEBAPP_NAME: globalwalletinvestment
- AZURE_WEBAPP_PACKAGE_PATH: './published'
- NETCORE_VERSION: '3.1.x'
- 
+  pull_request:
+    branches: [ main ]
+    
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+ 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core ${{ env.NETCORE_VERSION}}
+    - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: ${{ env.NETCORE_VERSION}}
-    
-    - name: Restore
-      run: dotnet restore
-      
+        dotnet-version: 3.1.x   
+         
+      # build project
     - name: Build
-      run: dotnet build --no-restore -c Release
+      run: dotnet build "Open.API/Open.API.csproj"
+      
+      # run tests with built project
+    - name: Tests      
+      run: dotnet test "Open.ApI.UnitTests/Open.API.Units.csproj"
           
-    - name: Publish
-      run: dotnet publish --no-build -c Release -o ${{ env.AZURE_WEBAPP_PACKAGE_PATH}}
+    - uses: azure/docker-login@v1
+      with:
+        login-server: openapicodingregistry.azurecr.io
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    - run: |
+        docker build -f Open.API/Dockerfile . -t openapicodingregistry.azurecr.io/openapicoding-app:latest
+        docker push openapicodingregistry.azurecr.io/openapicoding-app:latest
